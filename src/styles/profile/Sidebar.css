@@ -1,0 +1,312 @@
+.menu-sidebar,
+.menu-sidebar-mobile {
+  background-color: black;
+  width: 10%;
+  min-width: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu-sidebar-hamburger,
+.menu-sidebar-mobile {
+  display: none;
+}
+.menu-sidebar a,
+.menu-sidebar-mobile a {
+  text-decoration: none;
+}
+
+.menu-sidebar {
+  border-right: 0.1rem solid transparent;
+}
+.light-theme .menu-sidebar {
+  background-color: #fff;
+  border-right: 0.1rem solid #000;
+}
+
+.dark-theme .menu-sidebar {
+  background-color: #000;
+  border-right: 0.1rem solid #fff;
+}
+
+.menu-site-logo {
+  background-image: url("../../images/logo-main.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 40%;
+  width: 40%;
+  margin-top: 3rem;
+}
+
+.light-theme .menu-site-logo {
+  background-image: url("../../images/logo-black.png");
+}
+
+.menu-site-logo-name {
+  line-height: 4rem;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.light-theme .menu-site-logo-name {
+  color: #000;
+}
+
+.menu-item-main,
+.settings-menu {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 3rem;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.menu-item-main-selected {
+  color: goldenrod;
+}
+
+.light-theme .menu-item-main,
+.light-theme .menu-item-main-selected,
+.light-theme .settings-menu,
+.light-theme .settings-menu-selected {
+  color: #000;
+}
+
+.dark-theme .menu-item-main-selected,
+.dark-theme .settings-menu-selected {
+  color: #fff;
+}
+
+.menu-item-circle,
+.menu-item-circle-selected {
+  border: 0.2rem solid transparent;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-item-circle-selected {
+  border: 0.2rem solid goldenrod;
+}
+
+.light-theme .menu-item-circle-selected {
+  border: 0.2rem solid #000;
+}
+
+.dark-theme .menu-item-circle-selected {
+  border: 0.2rem solid #fff;
+}
+
+.menu-item-circle:hover {
+  background-color: #eee;
+  color: #000;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.settings-menu {
+  flex: 1;
+  align-items: flex-end;
+  padding: 50% 0;
+  font-size: 3rem;
+  transition: color 0.5s;
+  cursor: pointer;
+}
+
+.settings-menu-selected {
+  transition: color 0.5s;
+  animation-name: rotate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.settings-menu-selected {
+  color: goldenrod;
+}
+
+.setting-menu-options-main {
+  position: fixed;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  display: grid;
+  place-items: center;
+}
+
+.settings-menu-options {
+  background-color: #fff;
+  opacity: 1;
+  z-index: 2;
+  color: #000;
+  border: 0.5rem solid #000;
+  border-radius: 2rem;
+  width: 50vw;
+  padding: 2rem;
+}
+
+.settings-menu-options-header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+
+.settings-menu-options-header h1 {
+  flex: 1;
+  text-align: center;
+}
+
+.settings-menu-options ul > li {
+  padding: 0.5rem 2rem;
+  font-size: 2.4rem;
+  display: flex;
+}
+
+.settings-menu-options ul > li div {
+  border-radius: 50%;
+  height: 2.4rem;
+  width: 2.4rem;
+  border: 0.1rem solid #000;
+  margin-right: 2rem;
+}
+
+.settings-menu-options ul > li div.selected-theme {
+  background-color: #000;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+  .menu-sidebar {
+    display: none;
+  }
+
+  .menu-sidebar-mobile {
+    display: flex;
+    flex-direction: row;
+    height: 6rem;
+    width: 100%;
+    padding: 1rem;
+    background-color: rebeccapurple;
+  }
+
+  .dark-theme .menu-sidebar-mobile {
+    background-color: #000;
+  }
+
+  .light-theme .menu-sidebar-mobile {
+    background-color: #fff;
+  }
+
+  .menu-sidebar-hamburger {
+    display: block;
+    color: #fff;
+    font-size: 3rem;
+  }
+
+  .light-theme .menu-sidebar-hamburger {
+    color: #000;
+  }
+
+  .menu-sidebar-menu-items {
+    top: 6rem;
+    left: 0;
+    width: 100vw;
+    position: absolute;
+    z-index: 1;
+    background-color: rebeccapurple;
+    color: #fff;
+  }
+
+  .light-theme .menu-sidebar-menu-items {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .dark-theme .menu-sidebar-menu-items {
+    background-color: #000;
+    color: #fff;
+  }
+
+  .menu-sidebar-menu-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem;
+  }
+
+  .menu-item-main {
+    display: none;
+  }
+
+  .menu-item-main,
+  .settings-menu {
+    height: auto;
+  }
+
+  .menu-site-logo {
+    height: 100%;
+    margin: 0;
+    background-image: url("../../images/logo-png.png");
+  }
+
+  .dark-theme .menu-site-logo {
+    height: 100%;
+    margin: 0;
+    background-image: url("../../images/logo-main.png");
+  }
+
+  .menu-item-hamburger {
+    display: flex;
+    color: goldenrod;
+    margin: 2rem 1rem;
+    font-size: 2rem;
+  }
+
+  .light-theme .menu-item-hamburger {
+    color: #000;
+  }
+
+  .dark-theme .menu-item-hamburger {
+    color: #fff;
+  }
+
+  .menu-item-hamburger > div {
+    margin-left: 2rem;
+  }
+
+  .menu-sidebar-menu-name {
+    font-weight: bold;
+  }
+
+  .mobile-default-theme-icon {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .mobile-default-theme-icon > div {
+    height: 50%;
+    background-color: #fff;
+  }
+
+  .mobile-default-theme-icon > div:first-of-type {
+    background-color: rebeccapurple;
+  }
+}

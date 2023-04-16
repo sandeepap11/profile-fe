@@ -1,0 +1,113 @@
+.profile-about-main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.profile-about-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.profile-about-picture {
+  border-radius: 50%;
+  height: 20rem;
+  width: 20rem;
+  border: 0.5rem solid #fff;
+  margin-top: 2rem;
+  background-image: url("../../images/profile-image.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.light-theme .profile-about-picture {
+  border-color: #000;
+}
+
+.profile-about-header {
+  font-size: 7rem;
+  line-height: 8rem;
+  text-align: center;
+  color: aliceblue;
+  font-style: italic;
+}
+
+.light-theme .profile-about-header {
+  color: #000;
+}
+
+.dark-theme .profile-about-header {
+  color: #fff;
+}
+
+.profile-about-text:first-of-type {
+  text-align: center;
+  color: #469eea;
+  font-style: italic;
+  margin: 2rem 20%;
+  width: 60%;
+  font-size: 3rem;
+  line-height: 3.4rem;
+}
+.profile-about-text {
+  text-align: center;
+  color: #f5e639;
+  font-style: italic;
+  margin: 2rem 10%;
+  width: 80%;
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+
+.light-theme .profile-about-text {
+  color: #000;
+}
+
+.dark-theme .profile-about-text {
+  color: #fff;
+}
+
+.profile-about-social {
+  display: flex;
+  font-size: 4rem;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.profile-about-social a,
+.profile-about-social a:link,
+.profile-about-social a:visited {
+  text-decoration: none;
+  border: none;
+  color: #fff;
+}
+
+.light-theme .profile-about-social a,
+.light-theme .profile-about-social a:link,
+.light-theme .profile-about-social a:visited {
+  color: #000;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+  .profile-about-header {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+
+  .profile-about-text {
+    width: 90%;
+    margin: 0.2rem 1rem;
+    font-size: 1.4rem;
+  }
+
+  .profile-about-text:first-of-type {
+    font-size: 2rem;
+    width: 90%;
+    margin: 0.2rem 1rem;
+  }
+}

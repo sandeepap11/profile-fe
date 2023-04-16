@@ -1,0 +1,44 @@
+.app-main {
+  display: flex;
+  height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.main-page {
+  background-color: rebeccapurple;
+  flex: 1;
+  min-width: 80rem;
+  overflow: auto;
+}
+
+.light-theme .main-page {
+  background-color: #fff;
+}
+
+.dark-theme .main-page {
+  background-color: #000;
+}
+
+.main-error-page {
+  height: 100vh;
+  color: yellow;
+  font-size: 10rem;
+  display: grid;
+  place-items: center;
+  margin: 5rem;
+  padding: 5rem;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+  .main-page {
+    min-width: 30rem;
+  }
+}
